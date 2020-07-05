@@ -18,9 +18,14 @@ struct ContentView: View {
                     .aspectRatio(contentMode: .fit)
                 Text("\(number)")
                     .foregroundColor(/*@START_MENU_TOKEN@*/.white/*@END_MENU_TOKEN@*/)
+                    .font(/*@START_MENU_TOKEN@*/.largeTitle/*@END_MENU_TOKEN@*/)
             }
             Button(action: { self.number += 1 }){
                 Text("カウント")
+                    .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+                    .foregroundColor(.white)
+                    .background(/*@START_MENU_TOKEN@*/Color.blue/*@END_MENU_TOKEN@*/)
+                    .cornerRadius(10.0)
             }
         }
     }
