@@ -20,13 +20,25 @@ struct ContentView: View {
                     .foregroundColor(/*@START_MENU_TOKEN@*/.white/*@END_MENU_TOKEN@*/)
                     .font(/*@START_MENU_TOKEN@*/.largeTitle/*@END_MENU_TOKEN@*/)
             }
-            Button(action: { self.number += 1 }){
-                Text("カウント")
-                    .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
-                    .foregroundColor(.white)
-                    .background(/*@START_MENU_TOKEN@*/Color.blue/*@END_MENU_TOKEN@*/)
-                    .cornerRadius(10.0)
+            HStack {
+                Button(action: { self.number += 1 }){
+                    Text("カウント")
+                        .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+                        .foregroundColor(.white)
+                        .background(/*@START_MENU_TOKEN@*/Color.blue/*@END_MENU_TOKEN@*/)
+                        .cornerRadius(10.0)
+                }
+                Spacer()
+                    .frame(width: 12.0, height: 0.0)
+                Button(action: { self.number = 0 }){
+                    Text("リセット")
+                        .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+                        .foregroundColor(.white)
+                        .background(Color.red)
+                        .cornerRadius(10.0)
+                }
             }
+            
         }
     }
 }
